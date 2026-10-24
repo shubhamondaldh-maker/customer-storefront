@@ -415,7 +415,7 @@ export const PRODUCTS: Product[] = [
     stock: 19,
     rating: 4.5,
     reviewsCount: 39,
-    image: "https://images.unsplash.com/photo-1592659762303-90081d14b077?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80",
     featured: false
   },
   {
