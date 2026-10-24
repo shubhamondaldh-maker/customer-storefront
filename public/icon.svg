@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- 60% Mocha Brown Gradient -->
+    <linearGradient id="mochaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a1c18" />
+      <stop offset="50%" stop-color="#1f1412" />
+      <stop offset="100%" stop-color="#140d0b" />
+    </linearGradient>
+
+    <!-- 10% Pale Lavender to Platinum Gradient -->
+    <linearGradient id="lavenderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#f0daf7" />
+      <stop offset="100%" stop-color="#d8b4e2" />
+    </linearGradient>
+
+    <!-- Subtle Ambient Aura -->
+    <radialGradient id="auraGlow" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#d8b4e2" stop-opacity="0.32" />
+      <stop offset="65%" stop-color="#d8b4e2" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#d8b4e2" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadow Filter for Letter L -->
+    <filter id="glowShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#d8b4e2" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Base with Mocha Palette & Lavender Border -->
+  <rect
+    x="12"
+    y="12"
+    width="488"
+    height="488"
+    rx="116"
+    fill="url(#mochaGrad)"
+    stroke="#d8b4e2"
+    stroke-width="16"
+    stroke-opacity="0.65"
+  />
+
+  <!-- Ambient Light Reflection -->
+  <circle cx="240" cy="240" r="190" fill="url(#auraGlow)" />
+
+  <!-- Iconic Lumina Sparkle Star (Top Right) -->
+  <path
+    d="M 378 106 C 378 124 394 140 412 140 C 394 140 378 156 378 174 C 378 156 362 140 344 140 C 362 140 378 124 378 106 Z"
+    fill="#ffffff"
+    opacity="0.95"
+  />
+  <circle cx="378" cy="140" r="4" fill="#d8b4e2" />
+
+  <!-- Geometric Modern Grotesque 'L' -->
+  <path
+    d="M 164 146
+       C 164 136 172 128 182 128
+       L 218 128
+       C 228 128 236 136 236 146
+       L 236 318
+       L 336 318
+       C 346 318 354 326 354 336
+       L 354 370
+       C 354 380 346 388 336 388
+       L 182 388
+       C 172 388 164 380 164 370
+       Z"
+    fill="url(#lavenderGrad)"
+    filter="url(#glowShadow)"
+  />
+</svg>
