@@ -134,7 +134,7 @@ export default async function ProductDetailPage({ params }: Props) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         {/* Left: Product Media Gallery (Mocha container + Pale Lavender badge) */}
         <div className="space-y-4 lg:sticky lg:top-24">
-          <div className="relative aspect-square w-full bg-[#271c19] rounded-3xl overflow-hidden border border-[#48342e] shadow-2xl group">
+          <div className="sheen-overlay relative aspect-square w-full bg-[#271c19] rounded-3xl overflow-hidden border border-[#48342e] shadow-2xl group hover:border-[#d8b4e2]/70 transition-colors">
             <Image
               src={product.image}
               alt={product.name}
@@ -200,12 +200,18 @@ export default async function ProductDetailPage({ params }: Props) {
           <div className="pt-2">
             {product.stock > 10 ? (
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#271c19] text-[#d8b4e2] border border-[#48342e] text-xs font-bold shadow-xs">
-                <div className="w-2 h-2 rounded-full bg-[#d8b4e2] animate-pulse" />
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-beacon absolute inline-flex h-full w-full rounded-full bg-[#d8b4e2] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#d8b4e2]"></span>
+                </span>
                 <span>In Stock ({product.stock} units available) — Ready to ship today</span>
               </div>
             ) : product.stock > 0 ? (
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#271c19] text-[#e0bfe8] border border-[#d8b4e2]/50 text-xs font-bold shadow-xs">
-                <div className="w-2 h-2 rounded-full bg-[#d8b4e2] animate-pulse" />
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-beacon absolute inline-flex h-full w-full rounded-full bg-[#d8b4e2] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#d8b4e2]"></span>
+                </span>
                 <span>Low Stock: Only {product.stock} units left in stock!</span>
               </div>
             ) : (

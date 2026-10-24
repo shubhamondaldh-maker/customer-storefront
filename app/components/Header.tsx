@@ -30,11 +30,15 @@ export default function Header() {
       <div className="bg-[#18100e] text-[#b0afb2] text-xs py-2 px-4 border-b border-[#2f1f1a]">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#d8b4e2]/15 text-[#d8b4e2] border border-[#d8b4e2]/30 tracking-wider">
+            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-bold bg-[#d8b4e2]/15 text-[#d8b4e2] border border-[#d8b4e2]/30 tracking-wider">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-beacon absolute inline-flex h-full w-full rounded-full bg-[#d8b4e2] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#d8b4e2]"></span>
+              </span>
               NEW STORE
             </span>
             <span className="text-[#e5e4e2]">
-              Moving from WhatsApp & Instagram! Use code <strong className="text-[#20132b] bg-[#d8b4e2] px-1.5 py-0.5 rounded font-mono font-bold">DM15</strong> for 15% off.
+              Moving from WhatsApp & Instagram! Use code <strong className="text-[#20132b] bg-[#d8b4e2] px-1.5 py-0.5 rounded font-mono font-bold shadow-xs">DM15</strong> for 15% off.
             </span>
           </div>
           <div className="hidden md:flex items-center gap-4 text-[#b0afb2] text-[11px]">
@@ -49,13 +53,13 @@ export default function Header() {
       </div>
 
       {/* Main Navigation Header (60% Rich Mocha Surface, 30% Platinum Silver Structure, 10% Pale Lavender Accents) */}
-      <header className="sticky top-0 z-40 bg-[#241916]/95 backdrop-blur-md border-b border-[#3e2b25] transition-shadow shadow-lg">
+      <header className="sticky top-0 z-40 bg-[#241916]/95 backdrop-blur-md border-b border-[#3e2b25] transition-all shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-18">
             {/* Logo */}
             <div className="flex items-center gap-8">
               <Link href="/" className="flex items-center gap-2.5 group">
-                <div className="w-9 h-9 rounded-xl bg-[#d8b4e2] text-[#20132b] flex items-center justify-center font-black text-lg tracking-tighter shadow-md group-hover:scale-105 transition-transform">
+                <div className="w-9 h-9 rounded-xl bg-[#d8b4e2] text-[#20132b] flex items-center justify-center font-black text-lg tracking-tighter shadow-md group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_16px_rgba(216,180,226,0.5)] transition-all duration-300">
                   L
                 </div>
                 <div className="flex flex-col">
@@ -68,35 +72,35 @@ export default function Header() {
                 </div>
               </Link>
 
-              {/* Desktop Nav Links (Platinum Silver with Pale Lavender Hover) */}
+              {/* Desktop Nav Links (Platinum Silver with Pale Lavender Hover Glide) */}
               <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-[#b0afb2]">
                 <Link
                   href="/"
-                  className="hover:text-[#f5f5f7] hover:border-b-2 hover:border-[#d8b4e2] transition-colors py-1"
+                  className="relative hover:text-[#f5f5f7] transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-[#d8b4e2] after:transition-all after:duration-300"
                 >
                   Home
                 </Link>
                 <Link
                   href="/products"
-                  className="hover:text-[#f5f5f7] hover:border-b-2 hover:border-[#d8b4e2] transition-colors py-1"
+                  className="relative hover:text-[#f5f5f7] transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-[#d8b4e2] after:transition-all after:duration-300"
                 >
                   All Products
                 </Link>
                 <Link
                   href="/products?category=Keyboards+%26+Typing"
-                  className="hover:text-[#f5f5f7] hover:border-b-2 hover:border-[#d8b4e2] transition-colors py-1"
+                  className="relative hover:text-[#f5f5f7] transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-[#d8b4e2] after:transition-all after:duration-300"
                 >
                   Keyboards
                 </Link>
                 <Link
                   href="/products?category=Audio+%26+Sound"
-                  className="hover:text-[#f5f5f7] hover:border-b-2 hover:border-[#d8b4e2] transition-colors py-1"
+                  className="relative hover:text-[#f5f5f7] transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-[#d8b4e2] after:transition-all after:duration-300"
                 >
                   Audio
                 </Link>
                 <Link
                   href="/products?category=Lighting+%26+Lamps"
-                  className="hover:text-[#f5f5f7] hover:border-b-2 hover:border-[#d8b4e2] transition-colors py-1"
+                  className="relative hover:text-[#f5f5f7] transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-[#d8b4e2] after:transition-all after:duration-300"
                 >
                   Lighting
                 </Link>
@@ -113,7 +117,7 @@ export default function Header() {
                   placeholder="Search 26+ products..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-56 focus:w-72 transition-all duration-200 pl-9 pr-4 py-2 text-xs bg-[#2f211d] border border-[#48342e] focus:border-[#d8b4e2] focus:bg-[#382723] rounded-full outline-none text-[#f5f5f7] placeholder-[#8a898c]"
+                  className="w-56 focus:w-72 transition-all duration-300 pl-9 pr-4 py-2 text-xs bg-[#2f211d] border border-[#48342e] focus:border-[#d8b4e2] focus:bg-[#382723] rounded-full outline-none text-[#f5f5f7] placeholder-[#8a898c] focus:shadow-[0_0_12px_rgba(216,180,226,0.2)]"
                 />
               </form>
 
@@ -121,12 +125,12 @@ export default function Header() {
               <button
                 type="button"
                 onClick={toggleCart}
-                className="relative flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-[#2f211d] hover:bg-[#3b2a25] border border-[#48342e] text-[#f5f5f7] font-semibold text-sm transition-all active:scale-95 cursor-pointer shadow-sm hover:border-[#d8b4e2]/60"
+                className="group relative flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-[#2f211d] hover:bg-[#3b2a25] border border-[#48342e] text-[#f5f5f7] font-semibold text-sm transition-all duration-200 active:scale-95 cursor-pointer shadow-sm hover:border-[#d8b4e2]/80 hover:shadow-[0_0_16px_rgba(216,180,226,0.18)]"
                 aria-label="View Cart"
               >
-                <ShoppingBag className="w-4.5 h-4.5 text-[#d8b4e2]" />
+                <ShoppingBag className="w-4.5 h-4.5 text-[#d8b4e2] group-hover:scale-110 transition-transform" />
                 <span className="hidden sm:inline text-xs font-bold text-[#e5e4e2]">Cart</span>
-                <span className="inline-flex items-center justify-center min-w-5 h-5 px-1.5 text-[11px] font-black text-[#20132b] bg-[#d8b4e2] rounded-full shadow-xs">
+                <span className="inline-flex items-center justify-center min-w-5 h-5 px-1.5 text-[11px] font-black text-[#20132b] bg-[#d8b4e2] rounded-full shadow-xs group-hover:scale-110 transition-transform">
                   {hasMounted ? itemCount : 0}
                 </span>
               </button>

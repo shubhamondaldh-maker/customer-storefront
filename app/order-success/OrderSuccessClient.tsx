@@ -46,11 +46,15 @@ export default function OrderSuccessClient() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10">
       {/* Success Hero Header (Pale Lavender Checkmark + Platinum Title) */}
-      <div className="text-center space-y-4">
-        <div className="w-18 h-18 bg-[#d8b4e2]/20 text-[#d8b4e2] border border-[#d8b4e2]/40 rounded-full flex items-center justify-center mx-auto shadow-xl animate-in zoom-in">
-          <CheckCircle2 className="w-10 h-10" />
+      <div className="text-center space-y-4 relative">
+        {/* Celebration Ambient Radiant Glow */}
+        <div className="pointer-events-none absolute left-1/2 -top-12 -translate-x-1/2 w-64 h-64 bg-[#d8b4e2]/20 rounded-full blur-3xl animate-pulse-glow" />
+
+        <div className="relative w-20 h-20 bg-[#d8b4e2]/20 text-[#d8b4e2] border-2 border-[#d8b4e2]/60 rounded-full flex items-center justify-center mx-auto shadow-2xl animate-pop">
+          <CheckCircle2 className="w-11 h-11 text-[#d8b4e2] stroke-[2.5]" />
+          <span className="absolute inset-0 rounded-full border border-[#d8b4e2] animate-beacon opacity-75" />
         </div>
-        <div className="space-y-1">
+        <div className="space-y-1 relative z-10">
           <span className="text-xs font-black uppercase tracking-widest text-[#d8b4e2]">
             Payment Authorized & Order Confirmed
           </span>
@@ -61,7 +65,7 @@ export default function OrderSuccessClient() {
             Your receipt and live tracking updates have been recorded. We are carefully packaging your workspace gear.
           </p>
         </div>
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#271c19] rounded-xl border border-[#48342e]">
+        <div className="relative z-10 inline-flex items-center gap-2 px-4 py-2 bg-[#271c19] rounded-xl border border-[#48342e] shadow-md hover:border-[#d8b4e2]/50 transition-colors">
           <span className="text-xs text-[#b0afb2] font-semibold">Order Reference:</span>
           <strong className="font-mono text-sm text-[#d8b4e2] font-black">{orderId}</strong>
         </div>

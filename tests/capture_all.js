@@ -4,6 +4,10 @@ async function captureAll() {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
 
+  console.log('Capturing home page...');
+  await page.goto('http://localhost:3000', { waitUntil: 'networkidle' });
+  await page.screenshot({ path: 'screenshot_home.png', fullPage: true });
+
   console.log('Capturing /products...');
   await page.goto('http://localhost:3000/products', { waitUntil: 'networkidle' });
   await page.screenshot({ path: 'screenshot_products.png', fullPage: true });

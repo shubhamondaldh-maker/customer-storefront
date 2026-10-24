@@ -48,11 +48,11 @@ export default function CartDrawer() {
       {/* Backdrop */}
       <div
         onClick={() => setIsOpen(false)}
-        className="fixed inset-0 bg-black/75 backdrop-blur-xs transition-opacity animate-in fade-in"
+        className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 animate-in fade-in"
       />
 
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-[#241916] text-[#e5e4e2] shadow-2xl flex flex-col border-l border-[#3e2b25]">
+        <div className="w-screen max-w-md bg-[#241916] text-[#e5e4e2] shadow-2xl flex flex-col border-l border-[#3e2b25] animate-in slide-in-from-right duration-300 ease-out">
           {/* Header (Mocha Dark) */}
           <div className="px-6 py-5 border-b border-[#3e2b25] flex items-center justify-between bg-[#1c1412]">
             <div className="flex items-center gap-2">
@@ -67,20 +67,24 @@ export default function CartDrawer() {
             </button>
           </div>
 
-          {/* Free Shipping Progress Indicator (Pale Lavender Progress) */}
+          {/* Free Shipping Progress Indicator (Pale Lavender Animated Progress) */}
           <div className="px-6 py-3.5 bg-[#2f211d] border-b border-[#3e2b25] text-xs">
             {amountNeededForFreeShipping > 0 ? (
               <p className="text-[#b0afb2] font-medium mb-1.5">
                 Add <strong className="text-[#d8b4e2]">${amountNeededForFreeShipping.toFixed(2)}</strong> more to get <span className="underline decoration-[#d8b4e2] font-bold text-[#f5f5f7]">Free Worldwide Shipping</span>!
               </p>
             ) : (
-              <p className="text-[#d8b4e2] font-bold mb-1.5 flex items-center gap-1">
-                🎉 You qualified for Free Express Shipping!
+              <p className="text-[#d8b4e2] font-bold mb-1.5 flex items-center gap-1.5">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-beacon absolute inline-flex h-full w-full rounded-full bg-[#d8b4e2] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#d8b4e2]"></span>
+                </span>
+                <span>🎉 You qualified for Free Express Shipping!</span>
               </p>
             )}
-            <div className="w-full bg-[#1c1412] h-1.5 rounded-full overflow-hidden border border-[#48342e]">
+            <div className="w-full bg-[#1c1412] h-2 rounded-full overflow-hidden border border-[#48342e]">
               <div
-                className="h-full bg-[#d8b4e2] transition-all duration-300"
+                className="h-full animate-progress-shimmer transition-all duration-500 rounded-full"
                 style={{ width: `${progressToFreeShipping}%` }}
               />
             </div>

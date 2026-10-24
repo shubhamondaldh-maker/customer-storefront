@@ -38,27 +38,36 @@ export default function Home() {
     <div className="space-y-16 sm:space-y-24 pb-20">
       {/* Hero Section (60% Deep Mocha with Platinum Silver typography and 10% Pale Lavender accent) */}
       <section className="relative overflow-hidden bg-[#1c1412] text-[#e5e4e2] border-b border-[#2f1f1a]">
+        {/* Floating Ambient Glow Orbs */}
+        <div className="pointer-events-none absolute -top-24 -left-24 w-96 h-96 bg-[#d8b4e2]/10 rounded-full blur-3xl animate-float-slow" />
+        <div className="pointer-events-none absolute top-1/2 -right-24 w-[30rem] h-[30rem] bg-[#5c3a30]/35 rounded-full blur-3xl animate-float-delayed" />
+        <div className="pointer-events-none absolute bottom-0 left-1/3 w-80 h-80 bg-[#d8b4e2]/8 rounded-full blur-2xl animate-pulse-glow" />
+
         <div className="absolute inset-0 z-0 opacity-20">
           <Image
             src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=1600&q=80"
             alt="Workspace Setup Background"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-center scale-105 transition-transform duration-1000"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1c1412] via-[#1c1412]/90 to-transparent" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 flex flex-col justify-center">
           <div className="max-w-2xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#d8b4e2]/15 border border-[#d8b4e2]/30 text-[#d8b4e2] text-xs font-bold">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#d8b4e2]/15 border border-[#d8b4e2]/30 text-[#d8b4e2] text-xs font-bold backdrop-blur-xs">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-beacon absolute inline-flex h-full w-full rounded-full bg-[#d8b4e2] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#d8b4e2]"></span>
+              </span>
               <Sparkles className="w-3.5 h-3.5 text-[#d8b4e2]" />
               <span>Official Online Store Launch</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-[#f5f5f7]">
               Elevate Your Desk. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d8b4e2] via-[#f5f5f7] to-[#d8b4e2]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d8b4e2] via-[#ffffff] to-[#d8b4e2] animate-shimmer-text">
                 Deepen Your Focus.
               </span>
             </h1>
@@ -70,14 +79,14 @@ export default function Home() {
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
                 href="/products"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#d8b4e2] hover:bg-[#e0bfe8] text-[#20132b] font-black text-sm transition-all duration-200 shadow-xl shadow-[#d8b4e2]/20 active:scale-95"
+                className="group relative inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#d8b4e2] hover:bg-[#e0bfe8] text-[#20132b] font-black text-sm transition-all duration-300 shadow-xl shadow-[#d8b4e2]/20 hover:shadow-[#d8b4e2]/30 hover:-translate-y-0.5 active:scale-95"
               >
                 <span>Shop All 26 Products</span>
-                <ArrowRight className="w-4 h-4 text-[#20132b]" />
+                <ArrowRight className="w-4 h-4 text-[#20132b] group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/products?category=Keyboards+%26+Typing"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-[#2f211d] hover:bg-[#382723] text-[#f5f5f7] font-bold text-sm border border-[#48342e] transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-[#2f211d] hover:bg-[#382723] text-[#f5f5f7] font-bold text-sm border border-[#48342e] hover:border-[#d8b4e2]/60 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <span>Explore Keyboards</span>
               </Link>
@@ -85,16 +94,16 @@ export default function Home() {
 
             {/* Social proof counters */}
             <div className="pt-8 border-t border-[#3e2b25] grid grid-cols-3 gap-6 text-left">
-              <div>
-                <p className="text-2xl font-black text-[#f5f5f7]">12,000+</p>
+              <div className="group">
+                <p className="text-2xl font-black text-[#f5f5f7] group-hover:text-[#d8b4e2] transition-colors">12,000+</p>
                 <p className="text-xs text-[#b0afb2] mt-0.5">Desks Upgraded</p>
               </div>
-              <div>
-                <p className="text-2xl font-black text-[#d8b4e2]">4.9 ★</p>
+              <div className="group">
+                <p className="text-2xl font-black text-[#d8b4e2] group-hover:scale-105 transition-transform inline-block">4.9 ★</p>
                 <p className="text-xs text-[#b0afb2] mt-0.5">Average Rating</p>
               </div>
-              <div>
-                <p className="text-2xl font-black text-[#f5f5f7]">100%</p>
+              <div className="group">
+                <p className="text-2xl font-black text-[#f5f5f7] group-hover:text-[#d8b4e2] transition-colors">100%</p>
                 <p className="text-xs text-[#b0afb2] mt-0.5">Satisfaction Guaranteed</p>
               </div>
             </div>
@@ -102,11 +111,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Interactive Infinite Marquee Ticker */}
+      <div className="w-full bg-[#18100e] border-y border-[#3e2b25] py-3.5 overflow-hidden select-none shadow-inner">
+        <div className="animate-marquee flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-[#b0afb2]">
+          <span className="flex items-center gap-2 text-[#f5f5f7]">
+            <Sparkles className="w-3.5 h-3.5 text-[#d8b4e2]" /> 12,000+ Desks Elevated
+          </span>
+          <span className="text-[#48342e]">•</span>
+          <span className="flex items-center gap-2 text-[#d8b4e2]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#d8b4e2]" /> Code DM15 For 15% Off
+          </span>
+          <span className="text-[#48342e]">•</span>
+          <span>Solid American Oak & CNC Aluminum</span>
+          <span className="text-[#48342e]">•</span>
+          <span className="text-[#f5f5f7]">30-Day Risk-Free Guarantee</span>
+          <span className="text-[#48342e]">•</span>
+          <span>Worldwide Express Shipping Over $80</span>
+          <span className="text-[#48342e]">•</span>
+          <span className="text-[#d8b4e2]">Direct WhatsApp Founder Support</span>
+          <span className="text-[#48342e]">•</span>
+          {/* Duplicate loop for infinite seamless scroll */}
+          <span className="flex items-center gap-2 text-[#f5f5f7]">
+            <Sparkles className="w-3.5 h-3.5 text-[#d8b4e2]" /> 12,000+ Desks Elevated
+          </span>
+          <span className="text-[#48342e]">•</span>
+          <span className="flex items-center gap-2 text-[#d8b4e2]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#d8b4e2]" /> Code DM15 For 15% Off
+          </span>
+          <span className="text-[#48342e]">•</span>
+          <span>Solid American Oak & CNC Aluminum</span>
+          <span className="text-[#48342e]">•</span>
+          <span className="text-[#f5f5f7]">30-Day Risk-Free Guarantee</span>
+          <span className="text-[#48342e]">•</span>
+          <span>Worldwide Express Shipping Over $80</span>
+          <span className="text-[#48342e]">•</span>
+          <span className="text-[#d8b4e2]">Direct WhatsApp Founder Support</span>
+          <span className="text-[#48342e]">•</span>
+        </div>
+      </div>
+
       {/* Value Badges Banner (Mocha Surface + Platinum Typography + Pale Lavender Icons) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="p-5 bg-[#271c19] border border-[#48342e] rounded-2xl flex items-center gap-4 shadow-sm">
-            <div className="p-3 bg-[#1c1412] border border-[#48342e] rounded-xl text-[#d8b4e2]">
+          <div className="p-5 bg-[#271c19] border border-[#48342e] hover:border-[#d8b4e2]/50 hover:-translate-y-1 transition-all duration-300 rounded-2xl flex items-center gap-4 shadow-sm hover:shadow-xl">
+            <div className="p-3 bg-[#1c1412] border border-[#48342e] rounded-xl text-[#d8b4e2] group-hover:scale-110 transition-transform">
               <Truck className="w-6 h-6" />
             </div>
             <div>
@@ -115,7 +163,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="p-5 bg-[#271c19] border border-[#48342e] rounded-2xl flex items-center gap-4 shadow-sm">
+          <div className="p-5 bg-[#271c19] border border-[#48342e] hover:border-[#d8b4e2]/50 hover:-translate-y-1 transition-all duration-300 rounded-2xl flex items-center gap-4 shadow-sm hover:shadow-xl">
             <div className="p-3 bg-[#1c1412] border border-[#48342e] rounded-xl text-[#d8b4e2]">
               <RotateCcw className="w-6 h-6" />
             </div>
@@ -125,7 +173,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="p-5 bg-[#271c19] border border-[#48342e] rounded-2xl flex items-center gap-4 shadow-sm">
+          <div className="p-5 bg-[#271c19] border border-[#48342e] hover:border-[#d8b4e2]/50 hover:-translate-y-1 transition-all duration-300 rounded-2xl flex items-center gap-4 shadow-sm hover:shadow-xl">
             <div className="p-3 bg-[#1c1412] border border-[#48342e] rounded-xl text-[#d8b4e2]">
               <ShieldCheck className="w-6 h-6" />
             </div>
@@ -135,7 +183,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="p-5 bg-[#271c19] border border-[#48342e] rounded-2xl flex items-center gap-4 shadow-sm">
+          <div className="p-5 bg-[#271c19] border border-[#48342e] hover:border-[#d8b4e2]/50 hover:-translate-y-1 transition-all duration-300 rounded-2xl flex items-center gap-4 shadow-sm hover:shadow-xl">
             <div className="p-3 bg-[#1c1412] border border-[#48342e] rounded-xl text-[#d8b4e2]">
               <Star className="w-6 h-6" />
             </div>
@@ -161,7 +209,7 @@ export default function Home() {
             className="text-xs font-bold text-[#d8b4e2] hover:text-[#e0bfe8] flex items-center gap-1 group"
           >
             <span>View All Categories</span>
-            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
           </Link>
         </div>
 
@@ -170,20 +218,21 @@ export default function Home() {
             <Link
               key={cat.name}
               href={cat.href}
-              className="group relative h-64 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 block border border-[#48342e] hover:border-[#d8b4e2]/60"
+              className="sheen-overlay group relative h-64 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 block border border-[#48342e] hover:border-[#d8b4e2]/70 hover:-translate-y-1.5"
             >
               <Image
                 src={cat.image}
                 alt={cat.name}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#140c0a]/90 via-[#140c0a]/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#140c0a]/95 via-[#140c0a]/40 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 text-[#f5f5f7]">
                 <span className="text-[11px] font-bold text-[#d8b4e2]">{cat.count}</span>
-                <h3 className="text-lg font-black tracking-tight text-[#f5f5f7] group-hover:text-[#d8b4e2] transition-colors">
-                  {cat.name}
+                <h3 className="text-lg font-black tracking-tight text-[#f5f5f7] group-hover:text-[#d8b4e2] transition-colors flex items-center justify-between">
+                  <span>{cat.name}</span>
+                  <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-[#d8b4e2]" />
                 </h3>
               </div>
             </Link>
@@ -202,10 +251,10 @@ export default function Home() {
           </div>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#2f211d] hover:bg-[#382723] text-[#f5f5f7] font-bold text-xs border border-[#48342e] transition-colors"
+            className="group inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#2f211d] hover:bg-[#382723] text-[#f5f5f7] font-bold text-xs border border-[#48342e] hover:border-[#d8b4e2]/60 transition-all"
           >
             <span>See Full 26 Catalog</span>
-            <ArrowRight className="w-3.5 h-3.5 text-[#d8b4e2]" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#d8b4e2] group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
@@ -218,7 +267,7 @@ export default function Home() {
 
       {/* Founder's Story / DM Transition Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-br from-[#271c19] via-[#241916] to-[#1c1412] text-[#e5e4e2] rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-[#48342e] shadow-2xl">
+        <div className="sheen-overlay bg-gradient-to-br from-[#271c19] via-[#241916] to-[#1c1412] text-[#e5e4e2] rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-[#48342e] shadow-2xl hover:border-[#d8b4e2]/40 transition-colors">
           <div className="max-w-2xl relative z-10 space-y-4">
             <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#d8b4e2]">
               <CheckCircle2 className="w-4 h-4 text-[#d8b4e2]" />
@@ -233,13 +282,13 @@ export default function Home() {
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <Link
                 href="/products"
-                className="px-5 py-3 rounded-xl bg-[#d8b4e2] hover:bg-[#e0bfe8] text-[#20132b] font-black text-xs transition-colors shadow-md"
+                className="px-5 py-3 rounded-xl bg-[#d8b4e2] hover:bg-[#e0bfe8] text-[#20132b] font-black text-xs transition-all shadow-md hover:-translate-y-0.5 active:scale-95 cursor-pointer"
               >
                 Browse All Products
               </Link>
               <div className="text-xs text-[#b0afb2] flex items-center gap-1.5">
                 <span>Use coupon</span>
-                <span className="font-mono bg-[#1c1412] px-2.5 py-1 rounded text-[#d8b4e2] border border-[#48342e] font-black">
+                <span className="font-mono bg-[#1c1412] px-2.5 py-1 rounded text-[#d8b4e2] border border-[#48342e] font-black animate-pulse-glow">
                   DM15
                 </span>
                 <span>for 15% off at checkout</span>

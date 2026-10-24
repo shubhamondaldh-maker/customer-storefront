@@ -89,19 +89,19 @@ export default function AddToCartButton({ product, showQuantityPicker = true }: 
           type="button"
           onClick={handleAddToCart}
           disabled={isOutOfStock}
-          className={`flex-1 flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-black text-sm transition-all duration-200 active:scale-[0.99] cursor-pointer shadow-lg ${
+          className={`flex-1 flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-black text-sm transition-all duration-300 active:scale-95 cursor-pointer shadow-lg hover:shadow-[#d8b4e2]/30 ${
             isOutOfStock
               ? "bg-[#382723] text-[#8a898c] cursor-not-allowed"
               : isAdded
-              ? "bg-emerald-600 text-white"
-              : "bg-[#d8b4e2] hover:bg-[#e0bfe8] text-[#20132b] shadow-[#d8b4e2]/20"
+              ? "bg-emerald-600 text-white animate-pop shadow-[0_0_20px_rgba(16,185,129,0.5)]"
+              : "bg-[#d8b4e2] hover:bg-[#e0bfe8] text-[#20132b] shadow-[#d8b4e2]/20 hover:scale-[1.02]"
           }`}
         >
           {isOutOfStock ? (
             <span>Currently Out of Stock</span>
           ) : isAdded ? (
             <>
-              <Check className="w-5 h-5 text-white" />
+              <Check className="w-5 h-5 text-white stroke-[3]" />
               <span>Added to Your Cart!</span>
             </>
           ) : (

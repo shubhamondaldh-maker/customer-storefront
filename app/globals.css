@@ -49,3 +49,168 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #d8b4e2;
 }
+
+/* --- Cool Animations & Micro-Interactions --- */
+
+/* 1. Ambient Floating Orbs */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-16px) scale(1.05);
+  }
+}
+
+@keyframes floatDelayed {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(18px) rotate(3deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatDelayed 11s ease-in-out infinite;
+}
+
+/* 2. Gradient Shimmer on High-Impact Text */
+@keyframes textShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-shimmer-text {
+  background-size: 200% auto;
+  animation: textShimmer 5s ease infinite;
+}
+
+/* 3. Glowing Radiant Aura */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* 4. Infinite Smooth Marquee Ticker */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* 5. Card Hover Sheen Sweep */
+.sheen-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.sheen-overlay::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 0%,
+    rgba(216, 180, 226, 0.12) 50%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: none;
+}
+
+.sheen-overlay:hover::after {
+  left: 140%;
+  transition: left 0.85s ease-out;
+}
+
+/* 6. Free Shipping Progress Bar Animated Shimmer */
+@keyframes shimmerBar {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-progress-shimmer {
+  background: linear-gradient(
+    90deg,
+    #d8b4e2 0%,
+    #ffffff 50%,
+    #d8b4e2 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmerBar 2.5s infinite linear;
+}
+
+/* 7. Subtle Button Ripple & Pop */
+@keyframes quickPop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.92);
+  }
+  75% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pop {
+  animation: quickPop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* 8. Pulsing Live Beacon Indicator */
+@keyframes beaconPing {
+  75%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-beacon {
+  animation: beaconPing 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
