@@ -48,39 +48,39 @@ export default function CartDrawer() {
       {/* Backdrop */}
       <div
         onClick={() => setIsOpen(false)}
-        className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity animate-in fade-in"
+        className="fixed inset-0 bg-black/75 backdrop-blur-xs transition-opacity animate-in fade-in"
       />
 
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-white shadow-2xl flex flex-col">
-          {/* Header */}
-          <div className="px-6 py-5 border-b border-stone-200 flex items-center justify-between bg-stone-50">
+        <div className="w-screen max-w-md bg-[#241916] text-[#e5e4e2] shadow-2xl flex flex-col border-l border-[#3e2b25]">
+          {/* Header (Mocha Dark) */}
+          <div className="px-6 py-5 border-b border-[#3e2b25] flex items-center justify-between bg-[#1c1412]">
             <div className="flex items-center gap-2">
-              <ShoppingBag className="w-5 h-5 text-stone-800" />
-              <h2 className="text-base font-bold text-stone-900">Your Cart ({items.length})</h2>
+              <ShoppingBag className="w-5 h-5 text-[#d8b4e2]" />
+              <h2 className="text-base font-black text-[#f5f5f7]">Your Cart ({items.length})</h2>
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="p-1.5 text-stone-400 hover:text-stone-700 hover:bg-stone-200/60 rounded-full transition-colors cursor-pointer"
+              className="p-1.5 text-[#b0afb2] hover:text-[#f5f5f7] hover:bg-[#2f211d] rounded-full transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
 
-          {/* Free Shipping Progress Indicator */}
-          <div className="px-6 py-3 bg-amber-50/70 border-b border-amber-100 text-xs">
+          {/* Free Shipping Progress Indicator (Pale Lavender Progress) */}
+          <div className="px-6 py-3.5 bg-[#2f211d] border-b border-[#3e2b25] text-xs">
             {amountNeededForFreeShipping > 0 ? (
-              <p className="text-stone-700 font-medium mb-1.5">
-                Add <strong className="text-amber-700">${amountNeededForFreeShipping.toFixed(2)}</strong> more to get <span className="underline decoration-amber-400 font-bold">Free Worldwide Shipping</span>!
+              <p className="text-[#b0afb2] font-medium mb-1.5">
+                Add <strong className="text-[#d8b4e2]">${amountNeededForFreeShipping.toFixed(2)}</strong> more to get <span className="underline decoration-[#d8b4e2] font-bold text-[#f5f5f7]">Free Worldwide Shipping</span>!
               </p>
             ) : (
-              <p className="text-emerald-700 font-semibold mb-1.5 flex items-center gap-1">
+              <p className="text-[#d8b4e2] font-bold mb-1.5 flex items-center gap-1">
                 🎉 You qualified for Free Express Shipping!
               </p>
             )}
-            <div className="w-full bg-stone-200 h-1.5 rounded-full overflow-hidden">
+            <div className="w-full bg-[#1c1412] h-1.5 rounded-full overflow-hidden border border-[#48342e]">
               <div
-                className={`h-full transition-all duration-300 ${progressToFreeShipping >= 100 ? 'bg-emerald-500' : 'bg-amber-500'}`}
+                className="h-full bg-[#d8b4e2] transition-all duration-300"
                 style={{ width: `${progressToFreeShipping}%` }}
               />
             </div>
@@ -90,18 +90,18 @@ export default function CartDrawer() {
           <div className="flex-1 overflow-y-auto px-6 py-4 space-y-4">
             {items.length === 0 ? (
               <div className="py-16 text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-stone-100 rounded-full flex items-center justify-center text-stone-400">
+                <div className="w-16 h-16 mx-auto bg-[#2f211d] rounded-full flex items-center justify-center text-[#d8b4e2] border border-[#48342e]">
                   <ShoppingBag className="w-8 h-8" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-base font-semibold text-stone-800">Your cart is empty</h3>
-                  <p className="text-xs text-stone-500 max-w-xs mx-auto">
+                  <h3 className="text-base font-bold text-[#f5f5f7]">Your cart is empty</h3>
+                  <p className="text-xs text-[#b0afb2] max-w-xs mx-auto">
                     Explore our curated collection of workspace tech, ergonomic accessories, and mechanical keyboards.
                   </p>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2.5 bg-stone-900 text-white rounded-lg hover:bg-stone-800 transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-2 text-xs font-black px-5 py-2.5 bg-[#d8b4e2] text-[#20132b] rounded-xl hover:bg-[#e0bfe8] transition-colors cursor-pointer shadow-md"
                 >
                   <Link href="/products" onClick={() => setIsOpen(false)}>
                     Browse Products
@@ -112,9 +112,9 @@ export default function CartDrawer() {
               items.map((item) => (
                 <div
                   key={item.id}
-                  className="flex gap-4 p-3 bg-stone-50 border border-stone-200/80 rounded-xl hover:border-stone-300 transition-colors"
+                  className="flex gap-4 p-3.5 bg-[#2f211d] border border-[#48342e] rounded-xl hover:border-[#d8b4e2]/50 transition-colors"
                 >
-                  <div className="relative w-18 h-18 bg-white rounded-lg overflow-hidden shrink-0 border border-stone-200">
+                  <div className="relative w-18 h-18 bg-[#1c1412] rounded-lg overflow-hidden shrink-0 border border-[#3e2b25]">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -130,44 +130,44 @@ export default function CartDrawer() {
                         <Link
                           href={`/products/${item.id}`}
                           onClick={() => setIsOpen(false)}
-                          className="text-xs font-semibold text-stone-900 hover:text-amber-700 line-clamp-1"
+                          className="text-xs font-bold text-[#f5f5f7] hover:text-[#d8b4e2] line-clamp-1 transition-colors"
                         >
                           {item.name}
                         </Link>
                         <button
                           onClick={() => removeFromCart(item.id)}
-                          className="text-stone-400 hover:text-rose-600 transition-colors p-0.5 cursor-pointer"
+                          className="text-[#8a898c] hover:text-rose-400 transition-colors p-0.5 cursor-pointer"
                           title="Remove item"
                         >
                           <Trash2 className="w-3.5 h-3.5" />
                         </button>
                       </div>
-                      <p className="text-xs font-bold text-stone-900 mt-0.5">${item.price}</p>
+                      <p className="text-xs font-extrabold text-[#f5f5f7] mt-0.5">${item.price}</p>
                     </div>
 
                     <div className="flex items-center justify-between mt-2">
-                      <div className="flex items-center border border-stone-300 rounded-lg bg-white overflow-hidden shadow-2xs">
+                      <div className="flex items-center border border-[#48342e] rounded-lg bg-[#241916] overflow-hidden shadow-xs">
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="p-1 hover:bg-stone-100 text-stone-600 transition-colors cursor-pointer"
+                          className="p-1 hover:bg-[#382723] text-[#b0afb2] hover:text-[#f5f5f7] transition-colors cursor-pointer"
                           aria-label="Decrease quantity"
                         >
                           <Minus className="w-3 h-3" />
                         </button>
-                        <span className="w-7 text-center text-xs font-semibold text-stone-800">
+                        <span className="w-7 text-center text-xs font-bold text-[#f5f5f7]">
                           {item.quantity}
                         </span>
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="p-1 hover:bg-stone-100 text-stone-600 transition-colors cursor-pointer"
+                          className="p-1 hover:bg-[#382723] text-[#b0afb2] hover:text-[#f5f5f7] transition-colors cursor-pointer"
                           aria-label="Increase quantity"
                         >
                           <Plus className="w-3 h-3" />
                         </button>
                       </div>
 
-                      <span className="text-xs font-medium text-stone-500">
-                        Subtotal: ${(item.price * item.quantity).toFixed(2)}
+                      <span className="text-xs font-semibold text-[#b0afb2]">
+                        ${(item.price * item.quantity).toFixed(2)}
                       </span>
                     </div>
                   </div>
@@ -178,99 +178,99 @@ export default function CartDrawer() {
 
           {/* Footer Summary & Checkout */}
           {items.length > 0 && (
-            <div className="border-t border-stone-200 bg-stone-50 px-6 py-4 space-y-3.5">
+            <div className="border-t border-[#3e2b25] bg-[#1c1412] px-6 py-5 space-y-4">
               {/* Promo Code Input */}
               <form onSubmit={handleApplyPromo} className="flex gap-2">
                 <div className="relative flex-1">
-                  <Tag className="w-3.5 h-3.5 absolute left-3 top-2.5 text-stone-400" />
+                  <Tag className="w-3.5 h-3.5 absolute left-3 top-2.5 text-[#8a898c]" />
                   <input
                     type="text"
-                    placeholder="Discount code (try DM15)"
+                    placeholder="Promo code (DM15)"
                     value={promoInput}
                     onChange={(e) => setPromoInput(e.target.value)}
-                    className="w-full pl-8 pr-3 py-1.5 text-xs bg-white border border-stone-300 rounded-lg outline-none uppercase font-mono tracking-wider focus:border-stone-900"
+                    className="w-full pl-8 pr-3 py-2 text-xs bg-[#241916] border border-[#48342e] rounded-xl outline-none uppercase font-mono tracking-wider text-[#f5f5f7] placeholder-[#8a898c] focus:border-[#d8b4e2]"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="px-3 py-1.5 text-xs font-semibold bg-stone-900 hover:bg-stone-800 text-white rounded-lg transition-colors cursor-pointer"
+                  className="px-3.5 py-2 text-xs font-black bg-[#f5f5f7] hover:bg-[#e5e4e2] text-[#1c1412] rounded-xl transition-colors cursor-pointer border border-[#d8b4e2]/50"
                 >
                   Apply
                 </button>
               </form>
 
               {promoMessage && (
-                <p className={`text-[11px] ${promoMessage.isError ? 'text-rose-600' : 'text-emerald-600 font-medium'}`}>
+                <p className={`text-[11px] font-semibold ${promoMessage.isError ? 'text-rose-400' : 'text-[#d8b4e2]'}`}>
                   {promoMessage.text}
                 </p>
               )}
 
               {discount && (
-                <div className="flex items-center justify-between text-xs bg-emerald-50 text-emerald-800 px-3 py-1.5 rounded-lg border border-emerald-200">
+                <div className="flex items-center justify-between text-xs bg-[#d8b4e2]/15 text-[#d8b4e2] px-3 py-2 rounded-xl border border-[#d8b4e2]/30">
                   <div className="flex items-center gap-1.5">
                     <span className="font-mono font-bold">{discount.code}</span>
                     <span>({discount.description})</span>
                   </div>
                   <button
                     onClick={removeDiscount}
-                    className="text-emerald-700 hover:text-emerald-900 text-[11px] underline cursor-pointer"
+                    className="text-[#f5f5f7] hover:underline text-[11px] cursor-pointer"
                   >
                     Remove
                   </button>
                 </div>
               )}
 
-              {/* Price Breakdown */}
-              <div className="space-y-1.5 text-xs text-stone-600 pt-1">
+              {/* Price Breakdown (Platinum Silver) */}
+              <div className="space-y-1.5 text-xs text-[#b0afb2] pt-1">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span className="font-semibold text-stone-900">${subtotal.toFixed(2)}</span>
+                  <span className="font-bold text-[#f5f5f7]">${subtotal.toFixed(2)}</span>
                 </div>
                 {discountAmount > 0 && (
-                  <div className="flex justify-between text-emerald-600 font-medium">
+                  <div className="flex justify-between text-[#d8b4e2] font-semibold">
                     <span>Discount ({discount?.code})</span>
                     <span>-${discountAmount.toFixed(2)}</span>
                   </div>
                 )}
                 <div className="flex justify-between">
                   <span>Shipping</span>
-                  <span className="font-semibold text-stone-900">
+                  <span className="font-bold text-[#f5f5f7]">
                     {subtotal >= 80 || discount?.type === 'shipping' ? (
-                      <span className="text-emerald-600">FREE</span>
+                      <span className="text-[#d8b4e2]">FREE</span>
                     ) : (
                       '$9.99'
                     )}
                   </span>
                 </div>
-                <div className="flex justify-between text-stone-500 text-[11px]">
+                <div className="flex justify-between text-[11px] text-[#8a898c]">
                   <span>Estimated Tax (8%)</span>
                   <span>${((Math.max(0, subtotal - discountAmount)) * 0.08).toFixed(2)}</span>
                 </div>
-                <div className="flex justify-between text-sm font-bold text-stone-900 pt-2 border-t border-stone-200">
-                  <span>Estimated Total</span>
-                  <span className="text-base">${total.toFixed(2)}</span>
+                <div className="flex justify-between text-sm font-black text-[#f5f5f7] pt-2 border-t border-[#3e2b25]">
+                  <span>Total</span>
+                  <span className="text-base text-[#d8b4e2] font-black">${total.toFixed(2)}</span>
                 </div>
               </div>
 
-              {/* Checkout Button */}
+              {/* Checkout Button (Pale Lavender 10% Accent) */}
               <div className="space-y-2 pt-1">
                 <Link
                   href="/checkout"
                   onClick={() => setIsOpen(false)}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl font-bold text-sm shadow-md transition-all active:scale-[0.99] cursor-pointer"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 px-4 bg-[#d8b4e2] hover:bg-[#e0bfe8] text-[#20132b] rounded-xl font-black text-sm shadow-lg transition-all active:scale-[0.99] cursor-pointer"
                 >
                   <span>Proceed to Checkout</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 text-[#20132b]" />
                 </Link>
 
-                <div className="flex items-center justify-between text-[11px] text-stone-500 pt-1">
-                  <span className="flex items-center gap-1">
-                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Secure SSL Checkout
+                <div className="flex items-center justify-between text-[11px] text-[#8a898c] pt-1">
+                  <span className="flex items-center gap-1 text-[#b0afb2]">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#d8b4e2]" /> 256-Bit SSL Checkout
                   </span>
                   <Link
                     href="/cart"
                     onClick={() => setIsOpen(false)}
-                    className="underline hover:text-stone-800 font-medium"
+                    className="underline hover:text-[#f5f5f7] text-[#b0afb2] font-semibold"
                   >
                     View Full Cart Page
                   </Link>

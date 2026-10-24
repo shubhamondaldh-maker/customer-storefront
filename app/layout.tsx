@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | LUMINA Workspace Store",
     default: "LUMINA | Modern Workspace Tech & Ergonomic Essentials",
   },
-  description: "Curated mechanical keyboards, ambient lighting, studio audio, and ergonomic desk accessories designed to elevate your creative focus.",
+  description: "Curated mechanical keyboards, ambient lighting, studio audio, and ergonomic desk accessories in rich mocha brown, platinum silver, and pale lavender accents.",
   keywords: ["workspace", "mechanical keyboards", "desk setup", "ergonomic mice", "monitor lightbar", "studio audio"],
   authors: [{ name: "LUMINA Studio" }],
   openGraph: {
@@ -43,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="antialiased min-h-screen flex flex-col bg-stone-50 text-stone-900 selection:bg-amber-500 selection:text-white">
+      <body className="antialiased min-h-screen flex flex-col bg-[#1c1412] text-[#e5e4e2] selection:bg-[#d8b4e2] selection:text-[#1c1412]">
         <Header />
         <CartDrawer />
         <div className="flex-1">

@@ -90,33 +90,33 @@ export default function ProductsClient() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
-      {/* Header Title */}
+      {/* Header Title (Mocha + Platinum + Pale Lavender) */}
       <div className="space-y-2">
-        <span className="text-xs font-bold uppercase tracking-wider text-amber-600">
+        <span className="text-xs font-black uppercase tracking-wider text-[#d8b4e2]">
           Full Catalog
         </span>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <h1 className="text-3xl sm:text-4xl font-black text-stone-900 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-black text-[#f5f5f7] tracking-tight">
             Workspace Collection
           </h1>
-          <p className="text-sm font-semibold text-stone-500">
-            Showing <span className="text-stone-900">{filteredProducts.length}</span> of {PRODUCTS.length} products
+          <p className="text-sm font-bold text-[#b0afb2]">
+            Showing <span className="text-[#d8b4e2]">{filteredProducts.length}</span> of {PRODUCTS.length} products
           </p>
         </div>
       </div>
 
-      {/* Filter and Search Bar Controls */}
-      <div className="bg-white p-4 sm:p-5 rounded-2xl border border-stone-200 shadow-2xs space-y-4">
+      {/* Filter and Search Bar Controls (60% Mocha Surface, 30% Platinum Inputs, 10% Pale Lavender Pills) */}
+      <div className="bg-[#271c19] p-4 sm:p-5 rounded-2xl border border-[#48342e] shadow-lg space-y-4">
         <div className="flex flex-col lg:flex-row gap-4 justify-between items-stretch lg:items-center">
           {/* Search Input */}
           <form onSubmit={handleSearchSubmit} className="relative flex-1 max-w-md">
-            <Search className="w-4 h-4 absolute left-3.5 top-3.5 text-stone-400" />
+            <Search className="w-4 h-4 absolute left-3.5 top-3.5 text-[#b0afb2]" />
             <input
               type="text"
               placeholder="Search products by name or tag..."
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
-              className="w-full pl-10 pr-9 py-2.5 text-xs sm:text-sm bg-stone-50 border border-stone-200 rounded-xl outline-none focus:border-stone-900 focus:bg-white text-stone-900 transition-colors"
+              className="w-full pl-10 pr-9 py-2.5 text-xs sm:text-sm bg-[#1c1412] border border-[#48342e] rounded-xl outline-none focus:border-[#d8b4e2] text-[#f5f5f7] placeholder-[#8a898c] transition-colors"
             />
             {searchInput && (
               <button
@@ -125,7 +125,7 @@ export default function ProductsClient() {
                   setSearchInput("");
                   updateParams({ q: null });
                 }}
-                className="absolute right-3 top-3 text-stone-400 hover:text-stone-700 cursor-pointer"
+                className="absolute right-3 top-3 text-[#b0afb2] hover:text-[#f5f5f7] cursor-pointer"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -134,14 +134,14 @@ export default function ProductsClient() {
 
           {/* Sort Dropdown */}
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2 text-xs font-bold text-stone-600 shrink-0">
-              <ArrowUpDown className="w-3.5 h-3.5" />
+            <div className="flex items-center gap-2 text-xs font-bold text-[#b0afb2] shrink-0">
+              <ArrowUpDown className="w-3.5 h-3.5 text-[#d8b4e2]" />
               <span>Sort By:</span>
             </div>
             <select
               value={currentSort}
               onChange={(e) => updateParams({ sort: e.target.value })}
-              className="bg-stone-50 border border-stone-200 text-stone-900 text-xs sm:text-sm font-semibold rounded-xl px-3 py-2.5 outline-none focus:border-stone-900 cursor-pointer"
+              className="bg-[#1c1412] border border-[#48342e] text-[#f5f5f7] text-xs sm:text-sm font-semibold rounded-xl px-3 py-2.5 outline-none focus:border-[#d8b4e2] cursor-pointer"
             >
               <option value="featured">Featured First</option>
               <option value="price-asc">Price: Low to High</option>
@@ -152,10 +152,10 @@ export default function ProductsClient() {
           </div>
         </div>
 
-        {/* Category Pills */}
-        <div className="pt-2 border-t border-stone-100 flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
-          <span className="text-xs font-bold text-stone-400 shrink-0 mr-1 flex items-center gap-1">
-            <SlidersHorizontal className="w-3 h-3" /> Categories:
+        {/* Category Pills (Pale Lavender highlight on selected) */}
+        <div className="pt-2 border-t border-[#3e2b25] flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+          <span className="text-xs font-bold text-[#8a898c] shrink-0 mr-1 flex items-center gap-1">
+            <SlidersHorizontal className="w-3 h-3 text-[#d8b4e2]" /> Categories:
           </span>
           {CATEGORIES.map((cat) => {
             const isSelected = currentCategory === cat;
@@ -164,10 +164,10 @@ export default function ProductsClient() {
                 key={cat}
                 type="button"
                 onClick={() => updateParams({ category: cat === "All Categories" ? null : cat })}
-                className={`text-xs font-semibold px-3.5 py-1.5 rounded-full transition-all shrink-0 cursor-pointer ${
+                className={`text-xs font-black px-4 py-1.5 rounded-full transition-all shrink-0 cursor-pointer ${
                   isSelected
-                    ? "bg-stone-900 text-white shadow-xs"
-                    : "bg-stone-100 hover:bg-stone-200 text-stone-700"
+                    ? "bg-[#d8b4e2] text-[#20132b] shadow-md shadow-[#d8b4e2]/20"
+                    : "bg-[#2f211d] hover:bg-[#382723] text-[#e5e4e2] border border-[#48342e]"
                 }`}
               >
                 {cat}
@@ -180,38 +180,38 @@ export default function ProductsClient() {
       {/* Active Filter Tags */}
       {hasActiveFilters && (
         <div className="flex flex-wrap items-center gap-2 text-xs">
-          <span className="text-stone-500 font-medium">Active filters:</span>
+          <span className="text-[#b0afb2] font-semibold">Active filters:</span>
           {currentCategory !== "All Categories" && (
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-stone-200 text-stone-800 font-semibold">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#d8b4e2]/15 text-[#d8b4e2] border border-[#d8b4e2]/30 font-bold">
               Category: {currentCategory}
               <button
                 onClick={() => updateParams({ category: null })}
-                className="hover:text-stone-950 cursor-pointer"
+                className="hover:text-white cursor-pointer ml-1"
               >
                 <X className="w-3 h-3" />
               </button>
             </span>
           )}
           {currentQuery && (
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-stone-200 text-stone-800 font-semibold">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#d8b4e2]/15 text-[#d8b4e2] border border-[#d8b4e2]/30 font-bold">
               Search: &quot;{currentQuery}&quot;
               <button
                 onClick={() => {
                   setSearchInput("");
                   updateParams({ q: null });
                 }}
-                className="hover:text-stone-950 cursor-pointer"
+                className="hover:text-white cursor-pointer ml-1"
               >
                 <X className="w-3 h-3" />
               </button>
             </span>
           )}
           {currentSort !== "featured" && (
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-stone-200 text-stone-800 font-semibold">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#d8b4e2]/15 text-[#d8b4e2] border border-[#d8b4e2]/30 font-bold">
               Sort: {currentSort}
               <button
                 onClick={() => updateParams({ sort: null })}
-                className="hover:text-stone-950 cursor-pointer"
+                className="hover:text-white cursor-pointer ml-1"
               >
                 <X className="w-3 h-3" />
               </button>
@@ -219,7 +219,7 @@ export default function ProductsClient() {
           )}
           <button
             onClick={clearAllFilters}
-            className="text-amber-800 hover:text-amber-950 font-bold flex items-center gap-1 ml-2 underline cursor-pointer"
+            className="text-[#d8b4e2] hover:text-[#e0bfe8] font-black flex items-center gap-1 ml-2 underline cursor-pointer"
           >
             <RotateCcw className="w-3 h-3" />
             Clear All
@@ -229,19 +229,19 @@ export default function ProductsClient() {
 
       {/* Product Grid or Empty State */}
       {filteredProducts.length === 0 ? (
-        <div className="bg-white rounded-3xl border border-stone-200 p-12 text-center space-y-4 shadow-sm">
-          <div className="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mx-auto text-stone-400">
+        <div className="bg-[#271c19] rounded-3xl border border-[#48342e] p-12 text-center space-y-4 shadow-xl">
+          <div className="w-16 h-16 bg-[#1c1412] border border-[#48342e] rounded-full flex items-center justify-center mx-auto text-[#d8b4e2]">
             <Search className="w-8 h-8" />
           </div>
           <div className="space-y-1">
-            <h3 className="text-lg font-bold text-stone-900">No products match your criteria</h3>
-            <p className="text-xs sm:text-sm text-stone-500 max-w-sm mx-auto">
+            <h3 className="text-lg font-black text-[#f5f5f7]">No products match your criteria</h3>
+            <p className="text-xs sm:text-sm text-[#b0afb2] max-w-sm mx-auto">
               We couldn&apos;t find any items matching &quot;{currentQuery || currentCategory}&quot;. Try adjusting your keywords or clearing category filters.
             </p>
           </div>
           <button
             onClick={clearAllFilters}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-900 text-white rounded-xl text-xs font-bold hover:bg-stone-800 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#d8b4e2] text-[#20132b] rounded-xl text-xs font-black hover:bg-[#e0bfe8] transition-colors cursor-pointer shadow-md"
           >
             <RotateCcw className="w-3.5 h-3.5" />
             <span>Reset All Filters</span>
