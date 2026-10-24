@@ -22,7 +22,7 @@ As sales volume increased, customers needed a real website:
 
 ### 2. Installation
 ```bash
-git clone <repo-url>
+git clone https://github.com/shubhamondaldh-maker/customer-storefront.git
 cd customer-storefront
 npm install
 ```
