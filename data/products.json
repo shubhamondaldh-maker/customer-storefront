@@ -1,0 +1,236 @@
+[
+  {
+    "id": "1",
+    "name": "Minimalist Wooden Desk Lamp",
+    "price": 45,
+    "category": "Lighting & Lamps",
+    "description": "Sleek, touch-controlled warm LED lighting with solid beechwood base.",
+    "stock": 18,
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "2",
+    "name": "Pro Mechanical Ergonomic Keyboard",
+    "price": 139,
+    "category": "Keyboards & Typing",
+    "description": "Hot-swappable custom mechanical keyboard with tactile brown switches.",
+    "stock": 7,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "3",
+    "name": "Precision Wireless Ergonomic Mouse",
+    "price": 59,
+    "category": "Mice & Pointers",
+    "description": "Ergonomic 57-degree natural handshake angle with hyper-fast scroll.",
+    "stock": 24,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "4",
+    "name": "Solid Oak Desk Organizer Tray",
+    "price": 34,
+    "category": "Desk Accessories",
+    "description": "Hand-finished European white oak tray for pens, keys, and cables.",
+    "stock": 14,
+    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "5",
+    "name": "Active Noise-Cancelling Studio Headphones",
+    "price": 189,
+    "category": "Audio & Sound",
+    "description": "Immersive studio-grade acoustic clarity with hybrid active noise cancellation.",
+    "stock": 9,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "6",
+    "name": "Aluminum Curved Monitor Screenbar",
+    "price": 68,
+    "category": "Lighting & Lamps",
+    "description": "Asymmetric glare-free monitor lightbar with wireless desktop dial.",
+    "stock": 15,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "7",
+    "name": "Wool Felt Large Desk Mat (90x40cm)",
+    "price": 29,
+    "category": "Desk Accessories",
+    "description": "Extra large Merino wool blend felt pad with anti-slip silicone backing.",
+    "stock": 35,
+    "image": "https://images.unsplash.com/photo-1616440347437-b1c73416efc2?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "8",
+    "name": "Solid Walnut Laptop Riser Stand",
+    "price": 49,
+    "category": "Workspaces & Desks",
+    "description": "Brings your screen to ergonomic eye level with passive cooling airflow.",
+    "stock": 11,
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "9",
+    "name": "Hi-Fi Desktop Bookshelf Speakers (Pair)",
+    "price": 159,
+    "category": "Audio & Sound",
+    "description": "Acoustic wooden cabinet powered speakers with Bluetooth 5.0 and optical DAC.",
+    "stock": 6,
+    "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "10",
+    "name": "Retro Custom Aviator Coiled USB-C Cable",
+    "price": 24,
+    "category": "Keyboards & Typing",
+    "description": "Double-sleeved braided cable with GX16 4-pin detachable aviator connector.",
+    "stock": 22,
+    "image": "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "11",
+    "name": "Anodized Aluminum Vertical Laptop Stand",
+    "price": 32,
+    "category": "Desk Accessories",
+    "description": "Space-saving dual slot vertical dock for closed clamshell monitor setups.",
+    "stock": 19,
+    "image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "12",
+    "name": "Studio USB-C Cardioid Condenser Microphone",
+    "price": 95,
+    "category": "Audio & Sound",
+    "description": "Broadcast-quality voice clarity for calls, podcasting, and streaming.",
+    "stock": 13,
+    "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "13",
+    "name": "Dual Monitor Solid Wood Desk Shelf",
+    "price": 115,
+    "category": "Workspaces & Desks",
+    "description": "Multi-tiered solid hardwood riser with integrated aluminum accessories drawer.",
+    "stock": 5,
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "14",
+    "name": "Smart Ambient RGB LED Corner Bar",
+    "price": 79,
+    "category": "Lighting & Lamps",
+    "description": "Minimalist floor corner lamp with 16 million colors and music sync mode.",
+    "stock": 16,
+    "image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "15",
+    "name": "Magnetic 3-in-1 Fast Wireless Charging Station",
+    "price": 64,
+    "category": "Desk Accessories",
+    "description": "Simultaneously fast-charges iPhone, Apple Watch, and AirPods on one sleek stand.",
+    "stock": 21,
+    "image": "https://images.unsplash.com/photo-1622445262464-84b1456045b6?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "16",
+    "name": "Ultra-Lightweight Honeycomb Gaming Mouse",
+    "price": 49,
+    "category": "Mice & Pointers",
+    "description": "Featherlight 58g chassis with 16,000 DPI PixArt optical sensor.",
+    "stock": 17,
+    "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "17",
+    "name": "Memory Foam Contoured Keyboard Wrist Rest",
+    "price": 22,
+    "category": "Keyboards & Typing",
+    "description": "Ergonomic cooling-gel infused cushion for standard and tenkeyless keyboards.",
+    "stock": 30,
+    "image": "https://images.unsplash.com/photo-1601445638532-3c6f6c3aa1d6?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "18",
+    "name": "Under-Desk Steel Cable Management Channel",
+    "price": 28,
+    "category": "Workspaces & Desks",
+    "description": "Heavy-duty powder-coated steel tray hides power strips, bricks, and wires.",
+    "stock": 25,
+    "image": "https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "19",
+    "name": "Ceramic Temperature Controlled Smart Mug",
+    "price": 98,
+    "category": "Desk Accessories",
+    "description": "Maintains your coffee or tea at your precise drinking temperature for hours.",
+    "stock": 8,
+    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "20",
+    "name": "Low-Profile Custom Keycap Set (Retro Chalk)",
+    "price": 42,
+    "category": "Keyboards & Typing",
+    "description": "Thick PBT dye-sublimated keycaps with vintage typewriter aesthetic.",
+    "stock": 12,
+    "image": "https://images.unsplash.com/photo-1595044426077-d36d9236d54a?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "21",
+    "name": "4K Ultra-HD Auto-Focus Web Camera with Shutter",
+    "price": 112,
+    "category": "Audio & Sound",
+    "description": "Sony Starvis sensor with AI face tracking and physical privacy shutter.",
+    "stock": 14,
+    "image": "https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "22",
+    "name": "Adjustable Height Pneumatic Standing Desk Converter",
+    "price": 149,
+    "category": "Workspaces & Desks",
+    "description": "Effortlessly transition between sitting and standing with gas-spring lift.",
+    "stock": 4,
+    "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "23",
+    "name": "Precision CNC Aluminum Headphone Stand",
+    "price": 36,
+    "category": "Audio & Sound",
+    "description": "Sculpted cradle preserves headphone headband shape and cushions.",
+    "stock": 20,
+    "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "24",
+    "name": "Ergonomic Sculpted Trackball Mouse",
+    "price": 74,
+    "category": "Mice & Pointers",
+    "description": "Thumb-controlled optical trackball eliminates arm and shoulder movement.",
+    "stock": 10,
+    "image": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "25",
+    "name": "Wireless Charging Mouse Pad with Fast Qi Coil",
+    "price": 38,
+    "category": "Mice & Pointers",
+    "description": "Micro-textured speed surface with built-in 15W Qi phone charging zone.",
+    "stock": 19,
+    "image": "https://images.unsplash.com/photo-1592659762303-90081d14b077?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "26",
+    "name": "Edison Filament Warm Desk Accent Lantern",
+    "price": 48,
+    "category": "Lighting & Lamps",
+    "description": "Vintage amber spiral filament enclosed in hand-blown smoked borosilicate glass.",
+    "stock": 15,
+    "image": "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80"
+  }
+]
